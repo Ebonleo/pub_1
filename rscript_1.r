@@ -10,10 +10,10 @@ colnames(design) = levels(factor(group))
 rownames(design) = colnames(group)
 
 #voom normalizatoin
-norm <- voom(exprSet, design, plot = TRUE)
+norm <- voom(exprSet, design, plot = TRUE)#exprSet is the expressin matrix
 
 fit <- lmFit(norm, design, method = 'ls')#fitting, ?lmFit for details
-contrast <- makeContrasts('treat-control', levels = design)#contrasting matrix
+contrast <- makeContrasts('tumor-normal', levels = design)#contrasting matrix
 
 #Bayes fitting
 fit2 <- contrasts.fit(fit, contrast)
