@@ -1,4 +1,4 @@
-#import copied table. clinical information, suvival and RNA-seq, which are manually downloaded manually, are needed.
+#import copied table. clinical information, suvival, RNA-seq, and mutation maf, which are manually downloaded manually, are needed.
 x=read.delim("clipboard",stringsAsFactors = F,check.names = F)
 
 library(limma)
